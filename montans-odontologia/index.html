@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Montans Odontologia &amp; Estética Avançada · Implantes e lentes em São Sebastião do Paraíso</title>
+<meta name="description" content="Implantes, lentes de contato dental, harmonização orofacial e reabilitação oral com escaneamento 3D e planejamento digital. Agende sua avaliação pelo WhatsApp.">
+<meta name="theme-color" content="#1a1c44">
+<meta property="og:title" content="Montans Odontologia &amp; Estética Avançada">
+<meta property="og:description" content="Implantes e estética dental com planejamento digital em São Sebastião do Paraíso (MG).">
+<meta property="og:image" content="img/recepcao.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="logo/montans-monograma-dourado.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/cormorant-garamond-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/manrope-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<!-- ========= PIXEL / ANALYTICS =========
+  Cole aqui o código do Meta Pixel e do Google Tag (GA4 / Google Ads).
+  Todos os botões de WhatsApp já disparam:
+    fbq('track','Contact') + fbq('track','Lead')  e  gtag('event','generate_lead')
+  com o nome do botão/tratamento como parâmetro.
+====================================== -->
+
+<style>
+@font-face{font-family:"Cormorant";src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Cormorant";src:url(fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Cormorant";src:url(fonts/cormorant-garamond-latin-500-italic.woff2) format("woff2");font-weight:500;font-style:italic;font-display:swap}
+@font-face{font-family:"Manrope";src:url(fonts/manrope-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Manrope";src:url(fonts/manrope-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Manrope";src:url(fonts/manrope-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
+
+:root{
+  --navy:#1a1c44; --navy-2:#23265a; --navy-3:#2e3170;
+  --gold:#c6a15b; --gold-l:#ead6a0; --gold-d:#9c7a3a;
+  --ivory:#f7f4ee; --stone:#ece6db; --ink:#17182f; --muted:#5d5f78; --line:rgba(23,24,47,.12);
+  --serif:"Cormorant",Georgia,serif; --sans:"Manrope",system-ui,sans-serif;
+  --wrap:min(1200px,calc(100% - 48px));
+  --r:14px; --ease:cubic-bezier(.2,.7,.2,1);
+  --gold-grad:linear-gradient(120deg,#ead6a0 0%,#c6a15b 45%,#f1e1ac 70%,#a9823e 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--ivory);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{width:var(--wrap);margin-inline:auto}
+.skip{position:absolute;left:12px;top:-60px;background:var(--gold);color:var(--navy);padding:10px 16px;border-radius:8px;z-index:200;font-weight:700}
+.skip:focus{top:12px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2.3rem,4.6vw,3.9rem)}
+h2 em,h1 em{font-style:italic;color:var(--gold-d)}
+.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--gold-d);display:inline-flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.lead{font-size:1.12rem;color:var(--muted);max-width:56ch}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:.98rem;letter-spacing:.01em;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-gold{background:var(--gold-grad);background-size:160% 100%;color:var(--navy);box-shadow:0 10px 30px -10px rgba(198,161,91,.7)}
+.btn-gold:hover{background-position:100% 0;box-shadow:0 16px 36px -12px rgba(198,161,91,.85)}
+.btn-ghost{border:1px solid rgba(255,255,255,.45);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-3)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* header */
+.top{position:fixed;inset:0 0 auto;z-index:50;transition:background .35s,box-shadow .35s,padding .35s;padding:18px 0}
+.top.solid{background:rgba(26,28,68,.94);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(255,255,255,.06);padding:10px 0}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand img{height:46px;width:auto;transition:height .35s}
+.top.solid .brand img{height:38px}
+.nav{display:flex;gap:30px;color:rgba(255,255,255,.86);font-size:.92rem;font-weight:500}
+.nav a{position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav a:hover::after{transform:scaleX(1)}
+.top .btn{min-height:44px;padding:0 20px;font-size:.9rem}
+.menu-btn{display:none;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);color:#fff;align-items:center;justify-content:center}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--navy)}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,28,68,.94) 0%,rgba(26,28,68,.78) 38%,rgba(26,28,68,.25) 75%,rgba(26,28,68,.1) 100%),linear-gradient(0deg,rgba(26,28,68,.85) 0%,transparent 40%)}
+.hero .wrap{position:relative;z-index:2;padding:130px 0 64px}
+.hero h1{font-size:clamp(2.6rem,5.2vw,4.7rem);max-width:15ch;margin:20px 0 20px}
+.hero h1 em{color:var(--gold-l)}
+.hero .eyebrow{color:var(--gold-l)}
+.hero p{font-size:1.15rem;color:rgba(255,255,255,.82);max-width:48ch}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.proof{display:flex;gap:34px;flex-wrap:wrap;margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.16);font-size:.9rem;color:rgba(255,255,255,.8)}
+.proof span{display:flex;align-items:center;gap:10px}
+.proof svg{width:22px;height:22px;color:var(--gold-l);flex:none}
+.vid-toggle{position:absolute;right:max(24px,calc((100% - 1200px)/2));bottom:72px;z-index:3;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.35);color:#fff;display:flex;align-items:center;justify-content:center;transition:background .25s}
+.vid-toggle:hover{background:rgba(255,255,255,.12)}
+.vid-toggle svg{width:16px;height:16px}
+[data-enter]>*{opacity:0;transform:translateY(22px);animation:enter 1s var(--ease) forwards}
+[data-enter]>*:nth-child(2){animation-delay:.1s}[data-enter]>*:nth-child(3){animation-delay:.2s}[data-enter]>*:nth-child(4){animation-delay:.3s}[data-enter]>*:nth-child(5){animation-delay:.45s}
+@keyframes enter{to{opacity:1;transform:none}}
+
+section{padding:clamp(80px,11vw,140px) 0}
+.head{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:end;margin-bottom:56px}
+.head h2{margin-top:16px}
+
+/* chooser */
+.chooser{background:var(--ivory)}
+.choices{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.choice{text-align:left;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 24px 24px;display:flex;flex-direction:column;gap:14px;min-height:210px;transition:transform .3s var(--ease),border-color .3s,box-shadow .3s,background .3s}
+.choice:hover{transform:translateY(-2px);box-shadow:0 18px 40px -24px rgba(26,28,68,.35)}
+.choice[aria-selected="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.choice .ic{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--stone);color:var(--gold-d);transition:background .3s}
+.choice[aria-selected="true"] .ic{background:rgba(234,214,160,.14);color:var(--gold-l)}
+.choice .ic svg{width:24px;height:24px}
+.choice b{font-family:var(--serif);font-size:1.55rem;font-weight:500;line-height:1.1}
+.choice small{font-size:.9rem;color:var(--muted);margin-top:auto}
+.choice[aria-selected="true"] small{color:rgba(255,255,255,.7)}
+.panel{margin-top:16px;border-radius:var(--r);background:#fff;border:1px solid var(--line);display:grid;grid-template-columns:1fr 1.15fr;overflow:hidden;min-height:440px}
+.panel figure{position:relative;overflow:hidden;background:var(--stone)}
+.panel figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease),opacity .4s}
+.panel:hover figure img{transform:scale(1.03)}
+.panel .txt{padding:clamp(28px,4vw,52px);display:flex;flex-direction:column;gap:18px}
+.panel h3{font-size:clamp(1.9rem,3vw,2.6rem)}
+.panel ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+.panel li{display:flex;gap:10px;align-items:flex-start;font-size:.97rem}
+.panel li::before{content:"";width:7px;height:7px;margin-top:9px;border-radius:50%;background:var(--gold);flex:none}
+.panel .btn{align-self:flex-start;margin-top:auto}
+.panel .txt.swap{animation:swap .5s var(--ease)}
+@keyframes swap{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* before/after */
+.results{background:var(--navy);color:#fff}
+.results .lead{color:rgba(255,255,255,.72)}
+.results .eyebrow{color:var(--gold-l)}
+.results h2 em{color:var(--gold-l)}
+.ba-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:56px;align-items:center}
+.ba{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:1080/430;user-select:none;touch-action:pan-y;cursor:ew-resize;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba .after{clip-path:inset(0 0 0 var(--pos,50%))}
+.ba .bar{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:var(--gold-l);transform:translateX(-1px)}
+.ba .knob{position:absolute;top:50%;left:var(--pos,50%);width:54px;height:54px;border-radius:50%;background:var(--gold-grad);transform:translate(-50%,-50%);display:grid;place-items:center;color:var(--navy);box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.ba .knob svg{width:26px;height:26px}
+.ba .tag{position:absolute;top:16px;padding:6px 12px;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:rgba(26,28,68,.75);backdrop-filter:blur(6px)}
+.ba .tag.l{left:16px}.ba .tag.r{right:16px;background:var(--gold);color:var(--navy)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.results .note{font-size:.82rem;color:rgba(255,255,255,.5);margin-top:14px}
+.results .side{display:flex;flex-direction:column;gap:22px}
+.stat-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:6px 0 8px}
+.stat-row div{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px 18px;font-size:.92rem;color:rgba(255,255,255,.78)}
+.stat-row b{display:block;font-family:var(--serif);font-weight:500;font-size:1.5rem;color:var(--gold-l);line-height:1.15;margin-bottom:4px}
+
+/* tech / steps */
+.tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.tech-photo{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5}
+.tech-photo img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.tech-photo:hover img{transform:scale(1.03)}
+.tech-photo .chip{position:absolute;left:18px;bottom:18px;right:18px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:12px;padding:16px 18px;display:flex;gap:14px;align-items:center;font-size:.92rem}
+.chip i{width:40px;height:40px;border-radius:50%;background:var(--navy);display:grid;place-items:center;color:var(--gold-l);flex:none}
+.chip i svg{width:20px;height:20px}
+.steps{list-style:none;margin-top:36px;display:grid;gap:4px}
+.steps li{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:22px 0;border-top:1px solid var(--line)}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps .n{font-family:var(--serif);font-size:2.6rem;line-height:1;color:var(--gold)}
+.steps h3{font-family:var(--sans);font-size:1.08rem;font-weight:700;margin-bottom:4px;line-height:1.3}
+.steps p{color:var(--muted);font-size:.97rem}
+.tech .btn{margin-top:34px}
+
+/* clinic gallery */
+.clinic{background:var(--stone)}
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(150px,17vw,230px);gap:14px}
+.mosaic button{position:relative;overflow:hidden;border-radius:var(--r);background:#ddd}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.mosaic button:hover img{transform:scale(1.03)}
+.mosaic .a{grid-column:span 7;grid-row:span 2}.mosaic .b{grid-column:span 5}.mosaic .c{grid-column:span 5}
+.mosaic .d{grid-column:span 4;grid-row:span 1}.mosaic .e{grid-column:span 4}.mosaic .f{grid-column:span 4}
+.lb{position:fixed;inset:0;z-index:120;background:rgba(14,15,38,.94);display:none;align-items:center;justify-content:center;padding:24px}
+.lb.open{display:flex}
+.lb img{max-height:86vh;max-width:min(1200px,100%);border-radius:10px;object-fit:contain}
+.lb button{position:absolute;color:#fff;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.3);display:grid;place-items:center}
+.lb button:hover{background:rgba(255,255,255,.1)}
+.lb .x{top:20px;right:20px}.lb .p{left:20px;top:50%;transform:translateY(-50%)}.lb .nx{right:20px;top:50%;transform:translateY(-50%)}
+.lb svg{width:22px;height:22px}
+
+/* team */
+.team-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+.team-photos{display:grid;grid-template-columns:1fr;gap:14px}
+.team-photos figure{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3}
+.team-photos img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.team-photos figure:hover img{transform:scale(1.03)}
+.team-txt blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(1.6rem,2.4vw,2.1rem);line-height:1.25;margin:26px 0;color:var(--navy);border-left:2px solid var(--gold);padding-left:22px}
+.team-txt .who{font-weight:700}
+.team-txt .who span{display:block;font-weight:500;color:var(--muted);font-size:.92rem}
+.team-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.tp{border-radius:var(--r);overflow:hidden;aspect-ratio:4/5}.tp img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}.tp:hover img{transform:scale(1.03)}
+
+/* instagram/video */
+.insta{background:var(--navy);color:#fff;overflow:hidden}
+.insta .eyebrow{color:var(--gold-l)}
+.insta-grid{display:grid;grid-template-columns:1fr auto;gap:64px;align-items:center}
+.reels{display:flex;gap:16px}
+.reel{position:relative;width:clamp(170px,17vw,230px);aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:var(--navy-2);box-shadow:0 30px 60px -30px rgba(0,0,0,.7);transition:transform .35s var(--ease)}
+.reel:hover{transform:translateY(-4px)}
+.reel img,.reel video{width:100%;height:100%;object-fit:cover}
+.reel:nth-child(2){transform:translateY(36px)}.reel:nth-child(2):hover{transform:translateY(32px)}
+.reel .play{position:absolute;left:14px;bottom:14px;display:flex;gap:8px;align-items:center;font-size:.8rem;font-weight:700;background:rgba(0,0,0,.35);backdrop-filter:blur(6px);padding:7px 12px;border-radius:999px}
+.reel .play svg{width:12px;height:12px}
+.insta p{color:rgba(255,255,255,.75)}
+.insta .btn{margin-top:30px}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.9fr 1.3fr;gap:72px;align-items:start}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;font-weight:700;font-size:1.06rem;min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex:none;transition:transform .3s var(--ease),background .3s}
+.faq summary i svg{width:14px;height:14px}
+.faq details[open] summary i{transform:rotate(45deg);background:var(--navy);color:#fff;border-color:var(--navy)}
+.faq summary:hover{color:var(--gold-d)}
+.faq details p{padding:0 50px 24px 0;color:var(--muted)}
+
+/* visit */
+.visit{background:var(--stone)}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.visit-card{background:var(--navy);color:#fff;border-radius:var(--r);padding:clamp(30px,4vw,52px);display:flex;flex-direction:column;gap:24px}
+.visit-card h2{color:#fff}
+.visit-card .eyebrow{color:var(--gold-l)}
+.contact-list{list-style:none;display:grid;gap:18px}
+.contact-list li{display:flex;gap:16px;align-items:flex-start}
+.contact-list i{width:42px;height:42px;border-radius:50%;background:rgba(234,214,160,.12);color:var(--gold-l);display:grid;place-items:center;flex:none}
+.contact-list i svg{width:20px;height:20px}
+.contact-list small{display:block;color:rgba(255,255,255,.6);font-size:.82rem;letter-spacing:.06em;text-transform:uppercase}
+.contact-list a:hover{color:var(--gold-l)}
+.visit-card .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:auto}
+.visit-side{display:grid;grid-template-rows:1fr 1fr;gap:16px;min-height:560px}
+.visit-side figure,.map{border-radius:var(--r);overflow:hidden;position:relative}
+.visit-side img{width:100%;height:100%;object-fit:cover}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(.3) contrast(1.05)}
+
+/* final cta */
+.final{background:var(--navy);color:#fff;text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;inset:auto -10% -60% -10%;height:120%;background:radial-gradient(closest-side,rgba(198,161,91,.22),transparent);pointer-events:none}
+.final .wrap{position:relative;display:flex;flex-direction:column;align-items:center;gap:26px}
+.final img{width:86px}
+.final h2{max-width:16ch}
+.final h2 em{color:var(--gold-l)}
+.final p{color:rgba(255,255,255,.75);max-width:50ch}
+
+footer{background:#121332;color:rgba(255,255,255,.6);padding:56px 0 110px;font-size:.88rem}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+footer img{height:44px;width:auto;margin-bottom:16px}
+footer h4{color:#fff;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a:hover{color:var(--gold-l)}
+footer .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.08);padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.8rem}
+
+/* floating whatsapp */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:62px;height:62px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.7);transition:transform .25s var(--ease)}
+.wa-float:hover{transform:translateY(-3px) scale(1.04)}
+.wa-float svg{width:32px;height:32px}
+.wa-float::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:ring 2.8s ease-out infinite}
+@keyframes ring{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.55);opacity:0}}
+.mbar{display:none}
+
+/* responsive */
+@media (max-width:1080px){
+  .nav{display:none}
+  .choices{grid-template-columns:1fr 1fr}
+  .ba-grid,.tech-grid,.team-grid,.faq-grid,.insta-grid{grid-template-columns:1fr;gap:44px}
+  .head{grid-template-columns:1fr;gap:18px}
+  .tech-photo{aspect-ratio:16/11}
+  .reels{justify-content:flex-start}
+}
+@media (max-width:760px){
+  .hide-m{display:none}
+  body{font-size:16px}
+  :root{--wrap:calc(100% - 36px)}
+  .top .btn{display:none}
+  .brand img{height:38px}
+  .hero .wrap{padding:120px 0 120px}
+  .hero::after{background:linear-gradient(0deg,rgba(26,28,68,.96) 0%,rgba(26,28,68,.75) 55%,rgba(26,28,68,.35) 100%)}
+  .hero-actions .btn{width:100%}
+  .proof{gap:14px;flex-direction:column;margin-top:36px}
+  .vid-toggle{bottom:auto;top:90px}
+  .choices{gap:10px}
+  .choice{min-height:0;padding:18px 16px;gap:10px}
+  .choice b{font-size:1.25rem}
+  .choice small{display:none}
+  .panel{grid-template-columns:1fr}
+  .panel figure{aspect-ratio:16/10}
+  .panel ul{grid-template-columns:1fr}
+  .panel .btn{width:100%}
+  .stat-row{grid-template-columns:1fr}
+  .mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:150px;gap:10px}
+  .mosaic .a{grid-column:span 2;grid-row:span 2}
+  .mosaic .b,.mosaic .c,.mosaic .d,.mosaic .e{grid-column:span 1;grid-row:span 1}
+  .mosaic .f{grid-column:span 2;grid-row:span 1}
+  .tech-photo{aspect-ratio:4/3}.tech-photo .chip{font-size:.82rem;padding:12px 14px}
+  .tp{aspect-ratio:3/4}
+  .reel{width:calc(50% - 8px)}
+  .reel:nth-child(3){display:none}
+  .visit-grid{grid-template-columns:1fr}
+  .visit-side{min-height:0;grid-template-rows:240px 300px}
+  .visit-card .btn{width:100%}
+  .faq details p{padding-right:0}
+  footer .wrap{grid-template-columns:1fr}
+  .wa-float{display:none}
+  .mbar{display:grid;grid-template-columns:1fr 1.6fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(26,28,68,.96);backdrop-filter:blur(10px)}
+  .mbar a{min-height:48px;border-radius:999px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:.92rem}
+  .mbar .call{border:1px solid rgba(255,255,255,.3);color:#fff}
+  .mbar .wa{background:#25d366;color:#fff}
+  .mbar svg{width:20px;height:20px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  [data-enter]>*{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.03c-.25.69-1.44 1.32-2 1.37-.51.05-1.15.07-1.86-.12-.43-.13-.98-.31-1.69-.62-2.97-1.28-4.91-4.27-5.06-4.47-.15-.2-1.21-1.61-1.21-3.07 0-1.46.77-2.18 1.04-2.48.27-.3.6-.37.8-.37h.57c.18 0 .43-.07.67.51.25.6.84 2.06.92 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.45.52-.15.15-.3.31-.13.6.17.3.77 1.27 1.65 2.06 1.14 1.01 2.1 1.33 2.4 1.48.3.15.47.12.65-.07.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.35.08.12.08.72-.17 1.41Z"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3M3 12h18"/></symbol>
+  <symbol id="i-micro" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5M10 7v6M7 10h6"/></g></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></g></symbol>
+  <symbol id="i-tooth" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M12 5.5C10.3 4 7.6 3.4 5.9 4.6 3.6 6.2 4 9.6 5.2 12c.9 1.8 1 3.6 1.4 5.6.3 1.6.8 2.9 1.8 2.9 1.4 0 1.3-3.4 2.1-5 .3-.6.9-.6 1.2 0 .8 1.6.7 5 2.1 5 1 0 1.5-1.3 1.8-2.9.4-2 .5-3.8 1.4-5.6 1.2-2.4 1.6-5.8-.7-7.4-1.7-1.2-4.4-.6-6.1.9Z"/></symbol>
+  <symbol id="i-implant" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5h10c0 3-1.6 4.5-5 4.5S7 6.5 7 3.5Z"/><path d="M9 10h6M9.5 13h5M10 16h4M10.5 19h3M12 8v13"/></g></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M12 3c.6 4.2 2.8 6.4 7 7-4.2.6-6.4 2.8-7 7-.6-4.2-2.8-6.4-7-7 4.2-.6 6.4-2.8 7-7Zm6.5 11.5c.3 1.8 1.2 2.7 3 3-1.8.3-2.7 1.2-3 3-.3-1.8-1.2-2.7-3-3 1.8-.3 2.7-1.2 3-3Z"/></symbol>
+  <symbol id="i-face" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 9c0-3.6 2.7-6 6-6s6 2.4 6 6v2c0 4.4-2.7 8-6 8s-6-3.6-6-8V9Z"/><path d="M9.5 14.5c1.4 1 3.6 1 5 0M9 10h.01M15 10h.01"/></g></symbol>
+  <symbol id="i-crown" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M4 8l4 4 4-6 4 6 4-4-1.5 10h-13L4 8Z"/><path d="M6.5 21h11"/></g></symbol>
+  <symbol id="i-arrows" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9 7-5 5 5 5M15 7l5 5-5 5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M5 4h3.5l1.8 4.4-2.3 1.4a11 11 0 0 0 6.2 6.2l1.4-2.3L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5C10.6 20 4 13.4 3.5 5.6A1.5 1.5 0 0 1 5 4Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor"/></g></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15l12-7.5z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="m6 6 12 12M18 6 6 18"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m15 5-7 7 7 7"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></symbol>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Montans Odontologia — início"><img src="logo/montans-horizontal-dourado.svg" alt="Montans Odontologia &amp; Estética Avançada" width="282" height="46"></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#avaliacao">Como funciona</a>
+      <a href="#clinica">A clínica</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn-gold" data-wa="Header" href="#"><svg><use href="#i-wa"/></svg>Agendar avaliação</a>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- HERO — vídeo em loop. Para trocar pelo vídeo oficial da clínica, substitua img/hero.mp4
+     (horizontal, 10–20s, sem som, até ~4 MB). O poster é mostrado enquanto carrega. -->
+<section class="hero" id="inicio" aria-label="Apresentação">
+  <video id="heroVid" autoplay muted loop playsinline preload="metadata" poster="img/recepcao.jpg">
+    <source src="img/hero.mp4" type="video/mp4">
+  </video>
+  <div class="wrap" data-enter>
+    <span class="eyebrow"><span class="hide-m">Odontologia &amp; Estética Avançada ·&nbsp;</span>São Sebastião do Paraíso · MG</span>
+    <h1>Implantes e estética dental com <em>planejamento digital</em></h1>
+    <p>Escaneamento 3D, microscopia e impressão 3D para chegar a um sorriso natural, com cada caso conduzido de perto pela nossa equipe.</p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" data-wa="Hero" href="#"><svg><use href="#i-wa"/></svg>Agendar minha avaliação</a>
+      <a class="btn btn-ghost" href="#resultados">Ver antes e depois</a>
+    </div>
+    <div class="proof">
+      <span><svg><use href="#i-scan"/></svg>Escaneamento intraoral 3D</span>
+      <span><svg><use href="#i-micro"/></svg>Microscopia odontológica</span>
+      <span><svg><use href="#i-card"/></svg>Parcelamento e financiamento</span>
+    </div>
+  </div>
+  <button class="vid-toggle" id="vidToggle" aria-label="Pausar vídeo"><svg><use href="#i-pause"/></svg></button>
+</section>
+
+<!-- SELETOR DE TRATAMENTO -->
+<section class="chooser" id="tratamentos">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <span class="eyebrow">Tratamentos</span>
+        <h2>O que você quer <em>transformar</em> no seu sorriso?</h2>
+      </div>
+      <p class="lead">Escolha uma opção e veja como a Montans trata o seu caso. Na avaliação, o dentista confirma o que faz sentido para você.</p>
+    </div>
+    <div class="choices" role="tablist" aria-label="Escolha um tratamento">
+      <button class="choice" role="tab" aria-selected="true" aria-controls="panel" data-k="implantes"><span class="ic"><svg><use href="#i-implant"/></svg></span><b>Repor dentes que faltam</b><small>Implantes e protocolo</small></button>
+      <button class="choice" role="tab" aria-selected="false" aria-controls="panel" data-k="estetica"><span class="ic"><svg><use href="#i-spark"/></svg></span><b>Mudar cor e formato</b><small>Lentes, facetas e clareamento</small></button>
+      <button class="choice" role="tab" aria-selected="false" aria-controls="panel" data-k="harmonizacao"><span class="ic"><svg><use href="#i-face"/></svg></span><b>Harmonizar o rosto</b><small>Harmonização orofacial</small></button>
+      <button class="choice" role="tab" aria-selected="false" aria-controls="panel" data-k="reabilitacao"><span class="ic"><svg><use href="#i-crown"/></svg></span><b>Recuperar dentes desgastados</b><small>Reabilitação oral</small></button>
+    </div>
+    <div class="panel" id="panel" role="tabpanel">
+      <figure><img id="pImg" src="img/protese.webp" alt="Prótese de protocolo produzida para paciente da Montans" loading="lazy"></figure>
+      <div class="txt" id="pTxt">
+        <span class="eyebrow" id="pEye">Implantes dentários</span>
+        <h3 id="pTitle">Volte a mastigar e sorrir com segurança</h3>
+        <p class="lead" id="pDesc">Do implante unitário ao protocolo completo, com opções de carga imediata e técnicas sem enxerto ósseo quando o caso permite.</p>
+        <ul id="pList"></ul>
+        <a class="btn btn-navy" id="pBtn" data-wa="Implantes" href="#"><svg><use href="#i-wa"/></svg>Quero avaliar implantes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANTES E DEPOIS -->
+<section class="results" id="resultados">
+  <div class="wrap ba-grid">
+    <div>
+      <div class="ba" id="ba" style="--pos:50%">
+        <img src="img/antes.webp" alt="Antes: dentes desgastados e prótese parcial removível" draggable="false">
+        <img class="after" src="img/depois.webp" alt="Depois: reabilitação completa com dentes fixos" draggable="false">
+        <span class="tag l">Antes</span><span class="tag r">Depois</span>
+        <span class="bar"></span>
+        <span class="knob"><svg><use href="#i-arrows"/></svg></span>
+        <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois">
+      </div>
+      <p class="note">Caso real publicado com autorização do paciente. Os resultados variam conforme cada caso.</p>
+    </div>
+    <div class="side">
+      <span class="eyebrow">Resultados</span>
+      <h2>Arraste e veja a <em>diferença</em></h2>
+      <p class="lead">Reabilitação oral completa: dentes desgastados e prótese removível substituídos por uma arcada fixa, planejada digitalmente para ficar natural no rosto do paciente.</p>
+      <div class="stat-row">
+        <div><b>Planejamento 3D</b>o sorriso é desenhado antes do tratamento</div>
+        <div><b>Impressão 3D</b>peças provisórias e guias com precisão</div>
+      </div>
+      <a class="btn btn-gold" data-wa="Antes e depois" href="#"><svg><use href="#i-wa"/></svg>Quero um resultado assim</a>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="tech" id="avaliacao">
+  <div class="wrap tech-grid">
+    <figure class="tech-photo">
+      <img src="img/scanner.webp" alt="Dentista analisando escaneamento 3D dos dentes na tela" loading="lazy">
+      <figcaption class="chip"><i><svg><use href="#i-scan"/></svg></i><span>Escaneamento digital: sem massinha de moldagem e com o modelo 3D na tela.</span></figcaption>
+    </figure>
+    <div>
+      <span class="eyebrow">Sua primeira consulta</span>
+      <h2>Como funciona a <em>avaliação</em></h2>
+      <ol class="steps">
+        <li><span class="n">01</span><div><h3>Conversa e exame clínico</h3><p>Entendemos o que incomoda você e avaliamos dentes, gengiva e estrutura óssea.</p></div></li>
+        <li><span class="n">02</span><div><h3>Escaneamento e planejamento digital</h3><p>Seus dentes viram um modelo 3D. A partir dele, planejamos o tratamento com precisão.</p></div></li>
+        <li><span class="n">03</span><div><h3>Plano de tratamento e condições</h3><p>Você recebe as etapas, o prazo e as opções de pagamento, com parcelamento e financiamento.</p></div></li>
+      </ol>
+      <a class="btn btn-gold" data-wa="Como funciona" href="#"><svg><use href="#i-wa"/></svg>Agendar minha avaliação</a>
+    </div>
+  </div>
+</section>
+
+<!-- A CLÍNICA -->
+<section class="clinic" id="clinica">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <span class="eyebrow">A clínica</span>
+        <h2>Um espaço pensado para o seu <em>conforto</em></h2>
+      </div>
+      <p class="lead">Ambiente reservado, consultórios equipados e uma recepção feita para você chegar tranquilo. Toque nas fotos para ampliar.</p>
+    </div>
+    <div class="mosaic" id="mosaic">
+      <button class="a" aria-label="Ampliar foto da recepção"><img src="img/recepcao.webp" alt="Recepção da Montans com o logo dourado na parede" loading="lazy"></button>
+      <button class="b" aria-label="Ampliar foto da sala de espera"><img src="img/sala-espera.webp" alt="Sala de espera com sofás e lustre de cristal" loading="lazy"></button>
+      <button class="c" aria-label="Ampliar foto do consultório"><img src="img/consultorio.webp" alt="Consultório odontológico com piso de mármore" loading="lazy"></button>
+      <button class="d" aria-label="Ampliar foto da sala de planejamento"><img src="img/planejamento.webp" alt="Sala de planejamento com scanner intraoral" loading="lazy"></button>
+      <button class="e" aria-label="Ampliar foto da entrada"><img src="img/entrada.webp" alt="Entrada da clínica" loading="lazy"></button>
+      <button class="f" aria-label="Ampliar foto da fachada"><img src="img/fachada-noite.webp" alt="Fachada da clínica à noite" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section class="team" id="equipe">
+  <div class="wrap team-grid">
+    <div class="team-row">
+      <figure class="tp"><img src="img/dr-gustavo.webp" alt="Dr. Gustavo Montans Gonçalves em seu consultório" loading="lazy" style="object-position:30% center"></figure>
+      <figure class="tp"><img src="img/equipe.webp" alt="Equipe da Montans Odontologia na recepção" loading="lazy"></figure>
+    </div>
+    <div class="team-txt">
+      <span class="eyebrow">Quem cuida de você</span>
+      <h2>Cada caso conduzido <em>de perto</em></h2>
+      <blockquote>Dedicação à excelência em odontologia e estética avançada, com formação sólida e atualização constante.</blockquote>
+      <p class="who">Dr. Gustavo Montans Gonçalves<span>Fundador e responsável técnico · acompanha pessoalmente cada tratamento</span></p>
+      <p class="lead" style="margin-top:20px">Ao lado dele, uma equipe de dentistas e atendimento que acompanha você da primeira conversa até o pós-tratamento.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM / VÍDEOS
+     Para adicionar Reels: troque o <img> de cada .reel por
+     <video src="img/reel-1.mp4" muted loop playsinline autoplay poster="..."></video> (vertical 9:16, até ~3 MB cada). -->
+<section class="insta" id="instagram">
+  <div class="wrap insta-grid">
+    <div>
+      <span class="eyebrow">Bastidores</span>
+      <h2 style="color:#fff;margin-top:16px">Acompanhe os casos no <em style="color:var(--gold-l)">Instagram</em></h2>
+      <p style="margin-top:18px;max-width:46ch">Bastidores do laboratório, tratamentos e resultados dos pacientes, postados toda semana no @montansodontologia.</p>
+      <a class="btn btn-gold" href="https://www.instagram.com/montansodontologia/" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Seguir @montansodontologia</a>
+    </div>
+    <div class="reels">
+      <a class="reel" href="https://www.instagram.com/montansodontologia/" target="_blank" rel="noopener" aria-label="Ver Reels no Instagram"><img src="img/protese.webp" alt="Prótese protocolo feita no laboratório da clínica" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg>Reels</span></a>
+      <a class="reel" href="https://www.instagram.com/montansodontologia/" target="_blank" rel="noopener" aria-label="Ver Reels no Instagram"><img src="img/planejamento.webp" alt="Sala de planejamento digital" loading="lazy"><span class="play"><svg><use href="#i-play"/></svg>Reels</span></a>
+      <a class="reel" href="https://www.instagram.com/montansodontologia/" target="_blank" rel="noopener" aria-label="Ver Reels no Instagram"><img src="img/scanner.webp" alt="Escaneamento intraoral em 3D" loading="lazy" style="object-position:35% center"><span class="play"><svg><use href="#i-play"/></svg>Reels</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- DÚVIDAS -->
+<section class="faq" id="duvidas">
+  <div class="wrap faq-grid">
+    <div>
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2>Antes de <em>agendar</em></h2>
+      <p class="lead" style="margin-top:18px">Ficou alguma pergunta? Mande no WhatsApp que a nossa equipe responde.</p>
+      <a class="btn btn-navy" style="margin-top:28px" data-wa="Dúvidas" href="#"><svg><use href="#i-wa"/></svg>Tirar dúvida no WhatsApp</a>
+    </div>
+    <div>
+      <details open><summary>Como é a avaliação e quanto tempo dura?<i><svg><use href="#i-plus"/></svg></i></summary><p>É uma consulta para entender o seu caso: exame clínico, conversa sobre o que você quer mudar e, quando indicado, escaneamento digital. No final, você sai com o plano de tratamento.</p></details>
+      <details><summary>Dá para parcelar o tratamento?<i><svg><use href="#i-plus"/></svg></i></summary><p>Sim. A clínica trabalha com parcelamento e opções de financiamento. As condições são apresentadas junto com o plano de tratamento.</p></details>
+      <details><summary>Quem tem pouco osso pode fazer implante?<i><svg><use href="#i-plus"/></svg></i></summary><p>Em muitos casos, sim. Existem técnicas de implante sem enxerto ósseo. A avaliação com exames de imagem mostra qual é a melhor opção para você.</p></details>
+      <details><summary>Lente de contato dental desgasta o dente?<i><svg><use href="#i-plus"/></svg></i></summary><p>A clínica prioriza procedimentos minimamente invasivos. O quanto o dente precisa ser preparado depende de cada caso e é definido no planejamento digital.</p></details>
+      <details><summary>O que é carga imediata?<i><svg><use href="#i-plus"/></svg></i></summary><p>É quando os dentes provisórios são instalados logo após a colocação dos implantes, sem esperar meses. A indicação depende da avaliação do seu caso.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- VISITA -->
+<section class="visit" id="contato">
+  <div class="wrap visit-grid">
+    <div class="visit-card">
+      <span class="eyebrow">Onde estamos</span>
+      <h2>Venha conhecer a <em style="color:var(--gold-l)">Montans</em></h2>
+      <ul class="contact-list">
+        <li><i><svg><use href="#i-pin"/></svg></i><div><small>Endereço</small>R. Pimenta de Pádua, 1305 · Centro<br>São Sebastião do Paraíso · MG</div></li>
+        <li><i><svg><use href="#i-wa"/></svg></i><div><small>WhatsApp</small><a data-wa="Contato número" href="#">(35) 98869-5878</a></div></li>
+        <li><i><svg><use href="#i-phone"/></svg></i><div><small>Telefone</small><a href="tel:+553535315878">(35) 3531-5878</a></div></li>
+        <li><i><svg><use href="#i-ig"/></svg></i><div><small>Instagram</small><a href="https://www.instagram.com/montansodontologia/" target="_blank" rel="noopener">@montansodontologia</a></div></li>
+      </ul>
+      <div class="btns">
+        <a class="btn btn-gold" data-wa="Contato" href="#"><svg><use href="#i-wa"/></svg>Agendar pelo WhatsApp</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=R.+Pimenta+de+P%C3%A1dua,+1305,+S%C3%A3o+Sebasti%C3%A3o+do+Para%C3%ADso+-+MG" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Como chegar</a>
+      </div>
+    </div>
+    <div class="visit-side">
+      <figure><img src="img/fachada-noite.webp" alt="Fachada iluminada da Montans Odontologia" loading="lazy"></figure>
+      <div class="map"><iframe title="Mapa da Montans Odontologia" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=R.+Pimenta+de+P%C3%A1dua,+1305,+Centro,+S%C3%A3o+Sebasti%C3%A3o+do+Para%C3%ADso+-+MG&amp;output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final">
+  <div class="wrap">
+    <img src="logo/montans-monograma-dourado.svg" alt="" width="86" height="86">
+    <h2>O primeiro passo é uma <em>avaliação</em></h2>
+    <p>Mande uma mensagem e a nossa equipe encontra o melhor horário para você.</p>
+    <a class="btn btn-gold" data-wa="CTA final" href="#"><svg><use href="#i-wa"/></svg>Agendar minha avaliação</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <img src="logo/montans-horizontal-dourado.svg" alt="Montans Odontologia &amp; Estética Avançada" width="270" height="44">
+      <p>Implantes, estética dental, harmonização orofacial e reabilitação oral em São Sebastião do Paraíso (MG).</p>
+    </div>
+    <div>
+      <h4>Tratamentos</h4>
+      <ul><li><a href="#tratamentos">Implantes dentários</a></li><li><a href="#tratamentos">Lentes e facetas</a></li><li><a href="#tratamentos">Harmonização orofacial</a></li><li><a href="#tratamentos">Reabilitação oral</a></li></ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul><li>R. Pimenta de Pádua, 1305 · Centro</li><li><a data-wa="Rodapé" href="#">WhatsApp (35) 98869-5878</a></li><li><a href="tel:+553535315878">(35) 3531-5878</a></li><li><a href="https://www.instagram.com/montansodontologia/" target="_blank" rel="noopener">@montansodontologia</a></li></ul>
+    </div>
+    <div class="legal">
+      <!-- CFO: preencher o número do CRO do responsável técnico antes de publicar -->
+      <span>Responsável técnico: Dr. Gustavo Montans Gonçalves · CRO-MG <span data-cro>[nº]</span></span>
+      <span>© <span id="y">2026</span> Montans Odontologia &amp; Estética Avançada</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" data-wa="Botão flutuante" href="#" aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+<div class="mbar">
+  <a class="call" href="tel:+553535315878"><svg><use href="#i-phone"/></svg>Ligar</a>
+  <a class="wa" data-wa="Barra mobile" href="#"><svg><use href="#i-wa"/></svg>Agendar no WhatsApp</a>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <img id="lbImg" alt="">
+  <button class="x" id="lbX" aria-label="Fechar"><svg><use href="#i-x"/></svg></button>
+  <button class="p" id="lbP" aria-label="Foto anterior"><svg><use href="#i-left"/></svg></button>
+  <button class="nx" id="lbN" aria-label="Próxima foto"><svg><use href="#i-right"/></svg></button>
+</div>
+
+<script>
+(()=>{
+const PHONE='5535988695878';
+const MSG={
+  default:'Olá! Vim pelo site e gostaria de agendar uma avaliação na Montans.',
+  implantes:'Olá! Vim pelo site e quero agendar uma avaliação para implantes.',
+  estetica:'Olá! Vim pelo site e quero saber sobre lentes de contato dental / estética do sorriso.',
+  harmonizacao:'Olá! Vim pelo site e quero agendar uma avaliação de harmonização orofacial.',
+  reabilitacao:'Olá! Vim pelo site e quero avaliar uma reabilitação oral (próteses/coroas).'
+};
+const waUrl=k=>'https://wa.me/'+PHONE+'?text='+encodeURIComponent(MSG[k]||MSG.default);
+let current='implantes';
+function bindWa(){document.querySelectorAll('[data-wa]').forEach(a=>{
+  const k=a.id==='pBtn'?current:'default';
+  a.href=waUrl(k);a.target='_blank';a.rel='noopener';
+});}
+bindWa();
+document.addEventListener('click',e=>{
+  const a=e.target.closest('[data-wa]');if(!a)return;
+  const label=a.dataset.wa;
+  try{window.fbq&&fbq('track','Contact',{content_name:label});window.fbq&&fbq('track','Lead',{content_name:label});}catch(_){}
+  try{window.gtag&&gtag('event','generate_lead',{method:'whatsapp',button:label});}catch(_){}
+});
+
+/* header */
+const top=document.getElementById('top');
+const onScroll=()=>top.classList.toggle('solid',scrollY>40);
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* hero video */
+const v=document.getElementById('heroVid'),vt=document.getElementById('vidToggle');
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();vt.setAttribute('aria-label','Reproduzir vídeo');vt.innerHTML='<svg><use href="#i-play"/></svg>';}
+vt.addEventListener('click',()=>{if(v.paused){v.play();vt.setAttribute('aria-label','Pausar vídeo');vt.innerHTML='<svg><use href="#i-pause"/></svg>';}else{v.pause();vt.setAttribute('aria-label','Reproduzir vídeo');vt.innerHTML='<svg><use href="#i-play"/></svg>';}});
+
+/* treatment chooser */
+const T={
+  implantes:{eye:'Implantes dentários',title:'Volte a mastigar e sorrir com segurança',desc:'Do implante unitário ao protocolo completo, com opções de carga imediata e técnicas sem enxerto ósseo quando o caso permite.',list:['Implante unitário','Protocolo (arcada completa)','Carga imediata','Implante sem enxerto ósseo'],img:'img/protese.webp',alt:'Prótese de protocolo produzida para paciente da Montans',btn:'Quero avaliar implantes'},
+  estetica:{eye:'Estética dental',title:'Um sorriso desenhado para o seu rosto',desc:'Lentes de contato dental, facetas e clareamento planejados com design digital do sorriso, para um resultado natural e proporcional.',list:['Lentes de contato dental','Facetas de resina','Clareamento dental','Design digital do sorriso'],img:'img/planejamento.webp',alt:'Sala de planejamento digital do sorriso',btn:'Quero mudar meu sorriso'},
+  harmonizacao:{eye:'Harmonização orofacial',title:'Equilíbrio entre sorriso e rosto',desc:'Procedimentos para realçar contornos e suavizar marcas, sempre com naturalidade e avaliação individual.',list:['Toxina botulínica','Preenchimento labial','Lipo de papada','Rinomodelação','Platismoplastia'],img:'img/sala-espera.webp',alt:'Ambiente da clínica Montans',btn:'Quero avaliar harmonização'},
+  reabilitacao:{eye:'Reabilitação oral',title:'Função e estética de volta',desc:'Próteses, coroas de porcelana, canal e cuidado da gengiva para devolver conforto e uma mordida saudável.',list:['Prótese dentária','Coroa de porcelana','Tratamento de canal','Periodontia'],img:'img/consultorio.webp',alt:'Consultório odontológico da Montans',btn:'Quero avaliar meu caso'}
+};
+const tabs=[...document.querySelectorAll('.choice')];
+const $=id=>document.getElementById(id);
+function pick(k,focus){
+  current=k;const d=T[k];
+  tabs.forEach(t=>{const on=t.dataset.k===k;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;if(on&&focus)t.focus();});
+  $('pEye').textContent=d.eye;$('pTitle').textContent=d.title;$('pDesc').textContent=d.desc;
+  $('pList').innerHTML=d.list.map(x=>'<li>'+x+'</li>').join('');
+  $('pImg').src=d.img;$('pImg').alt=d.alt;
+  $('pBtn').lastChild.textContent=d.btn;$('pBtn').dataset.wa=d.eye;$('pBtn').href=waUrl(k);
+  const tx=$('pTxt');tx.classList.remove('swap');void tx.offsetWidth;tx.classList.add('swap');
+}
+tabs.forEach((t,i)=>{
+  t.addEventListener('click',()=>pick(t.dataset.k));
+  t.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const n=tabs[(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];pick(n.dataset.k,true);}});
+});
+pick('implantes');
+
+/* before / after */
+const ba=$('ba'),rng=ba.querySelector('input');
+const set=p=>{p=Math.max(0,Math.min(100,p));ba.style.setProperty('--pos',p+'%');rng.value=p;};
+rng.addEventListener('input',()=>set(+rng.value));
+let drag=false;
+const fromEvt=e=>{const r=ba.getBoundingClientRect();set((e.clientX-r.left)/r.width*100);};
+ba.addEventListener('pointerdown',e=>{drag=true;fromEvt(e);});
+addEventListener('pointermove',e=>{if(drag)fromEvt(e);});
+addEventListener('pointerup',()=>drag=false);
+/* gentle hint once visible */
+const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting&&!matchMedia('(prefers-reduced-motion: reduce)').matches){let t=0;const s=performance.now();const step=n=>{t=(n-s)/1600;if(t>1||drag){return}set(50+Math.sin(t*Math.PI*2)*18);requestAnimationFrame(step)};requestAnimationFrame(step);io.disconnect();}})},{threshold:.6});
+io.observe(ba);
+
+/* lightbox */
+const imgs=[...document.querySelectorAll('#mosaic img')];let li=0;
+const lb=$('lb'),lbImg=$('lbImg');
+const show=i=>{li=(i+imgs.length)%imgs.length;lbImg.src=imgs[li].src;lbImg.alt=imgs[li].alt;};
+let lastFocus;
+document.querySelectorAll('#mosaic button').forEach((b,i)=>b.addEventListener('click',()=>{lastFocus=b;show(i);lb.classList.add('open');$('lbX').focus();}));
+const close=()=>{lb.classList.remove('open');lastFocus&&lastFocus.focus();};
+$('lbX').onclick=close;$('lbP').onclick=()=>show(li-1);$('lbN').onclick=()=>show(li+1);
+lb.addEventListener('click',e=>{if(e.target===lb)close();});
+addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')show(li+1);if(e.key==='ArrowLeft')show(li-1);});
+
+$('y').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
